@@ -22,8 +22,8 @@ const SinglePost = ({title,description,date,tag,slug,isPagenationPage}:Props) =>
 
             {tag.map((t:string,index:number)=>{
               return(
-                <Link href={`/posts/tag/${t}/page/1`}>
-                <span key={index} className='text-white bg-gray-500 rounded-xl px-2 pb-1 font-medium'>
+                <Link href={`/posts/tag/${t}/page/1`} key={index}>
+                <span  className='text-white bg-gray-500 rounded-xl px-2 pb-1 font-medium'>
               {t}
               </span>
                 </Link>
@@ -42,8 +42,8 @@ const SinglePost = ({title,description,date,tag,slug,isPagenationPage}:Props) =>
 
             {tag.map((t:string,index:number)=>{
               return(
-                <Link href={`/posts/tag/${t}/page/1`}>
-                <span className='text-white bg-gray-500 rounded-xl px-2 pb-1 font-medium' key={index}>
+                <Link href={`/posts/tag/${t}/page/1`} key={index}>
+                <span className='text-white bg-gray-500 rounded-xl px-2 pb-1 font-medium'>
               {t}
               </span>
                 </Link>

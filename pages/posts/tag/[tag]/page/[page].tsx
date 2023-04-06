@@ -23,8 +23,8 @@ export default function BlogTagPageList({posts,numberOfPagesByTag,currentTag}:an
         <h1 className='text-5xl font-medium text-center mb-16'>Notion Blog🚀</h1>
         <section className='sm:grid grid-cols-2 w-5/6 gap-3 mx-auto'>
         {
-            posts.map((post:any)=>{
-                return (<div key={post.id} >
+            posts.map((post:any,index:number)=>{
+                return (<div key={index} >
               <SinglePost 
               title={post.title}
               description={post.description}

@@ -24,8 +24,8 @@ export default function Home({fourPosts,allTags}:any) {
         <h1 className='text-5xl font-medium text-center mb-16'>Notion Blog🚀</h1>
 
         {
-          fourPosts.map((post:any)=>{
-            return (<div key={post.id} className='mx-4'>
+          fourPosts.map((post:any,index:number)=>{
+            return (<div key={index} className='mx-4'>
               <SinglePost 
               title={post.title}
               description={post.description}

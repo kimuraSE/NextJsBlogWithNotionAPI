@@ -21,24 +21,7 @@ const Posts = ({post}:any) => {
           )
         })}
         <div className=' mt-10 font-medium'>
-          <ReactMarkdown components={{
-        code({node, inline, className, children, ...props}) {
-        const match = /language-(\w+)/.exec(className || '')
-        return !inline && match ? (
-          <SyntaxHighlighter
-            children={String(children).replace(/\n$/, '')}
-            style={vscDarkPlus}
-            language={match[1]}
-            PreTag="div"
-            {...props}
-          />
-        ) : (
-          <code className={className} {...props}>
-            {children}
-          </code>
-        )
-      }
-    }}>
+          <ReactMarkdown>
           {post.mdString}
           </ReactMarkdown>
           <Link href={'/'}>
